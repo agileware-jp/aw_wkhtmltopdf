@@ -1,0 +1,66 @@
+name: test
+
+on:
+  - pull_request
+  - push
+  - workflow_dispatch
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - macos
+          - ubuntu
+          - windows
+        ruby_version:
+          - 3.2
+          - 3.1
+          - 2.6
+    runs-on: ${{ matrix.os }}-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby_version }}
+      - name: Install dependencies
+        shell: bash
+        run: |
+          set -eux -o pipefail
+          gem update --system
+          bundle install --retry 3
+      - name: Run executable test
+        shell: bash
+        run: |
+          set -eux -o pipefail
+          bundle exec rake install
+          ruby -raw_wkhtmltopdf_binary -e 'puts(AwWkhtmltopdfBinary.path)'
+          aw_wkhtmltopdf_binary --version
+          binary_path=$(ruby -raw_wkhtmltopdf_binary -e 'puts(AwWkhtmltopdfBinary.path)')
+          $binary_path --version
+      # https://github.com/nishidayuya/dpu/blob/v0.6.0/.github/workflows/test.yml#L48
+      - name: Output versions
+        if: always()
+        shell: bash
+        run: |
+          set -eux
+          run_if_exist() {
+            if test "x$(which $1)" != "x"
+            then
+              "$@"
+            fi
+          }
+          uname -a
+          run_if_exist sw_vers # macos
+          run_if_exist lsb_release --all # ubuntu
+          ruby --version
+          gem --version
+          bundle --version
+      - name: Output gem versions
+        if: always()
+        run: bundle list
+      - name: Output deb package versions
+        if: always() && matrix.os == 'ubuntu'
+        run: dpkg -l
