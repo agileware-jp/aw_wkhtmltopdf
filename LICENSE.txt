@@ -1,0 +1,8 @@
+On libexec/ directory, they are licensed under GNU LGPLv3:
+https://github.com/wkhtmltopdf/wkhtmltopdf/blob/0.12.3/LICENSE
+
+---
+
+On except libexec/ directory, see below:
+
+Copyright (c) 2023 Agileware Inc. All rights reserved.

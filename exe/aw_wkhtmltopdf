@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require "aw_wkhtmltopdf"
+
+Process.exec(AwWkhtmltopdf.path.to_s, *ARGV)
