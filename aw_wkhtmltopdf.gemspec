@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-require_relative "lib/aw_wkhtmltopdf_binary/version"
+require_relative "lib/aw_wkhtmltopdf/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "aw_wkhtmltopdf_binary"
-  spec.version = AwWkhtmltopdfBinary::VERSION
+  spec.name = "aw_wkhtmltopdf"
+  spec.version = AwWkhtmltopdf::VERSION
   spec.authors = ['Agileware Inc.']
 
   spec.summary = 'WKHTMLTOPDF binaries for GNU/Linux, Windows and macOS'
-  spec.homepage = 'https://github.com/agileware-jp/aw_wkhtmltopdf_binary'
+  spec.homepage = 'https://github.com/agileware-jp/aw_wkhtmltopdf'
   spec.required_ruby_version = ">= 2.6.0"
 
   spec.metadata["homepage_uri"] = spec.homepage

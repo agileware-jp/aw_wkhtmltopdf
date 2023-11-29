@@ -1,5 +1,0 @@
-#!/usr/bin/env ruby
-
-require "aw_wkhtmltopdf_binary"
-
-Process.exec(AwWkhtmltopdfBinary.path.to_s, *ARGV)

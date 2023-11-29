@@ -3,9 +3,9 @@
 require 'pathname'
 require 'rbconfig'
 
-require_relative 'aw_wkhtmltopdf_binary/version'
+require_relative 'aw_wkhtmltopdf/version'
 
-module AwWkhtmltopdfBinary
+module AwWkhtmltopdf
   LIBEXEC_PATH = Pathname(__dir__).parent.join('libexec').expand_path
 
   class << self

@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in aw_wkhtmltopdf_binary.gemspec
+# Specify your gem's dependencies in aw_wkhtmltopdf.gemspec
 gemspec
 
 gem "rake", "~> 13.0"

@@ -36,9 +36,9 @@ jobs:
         run: |
           set -eux -o pipefail
           bundle exec rake install
-          ruby -raw_wkhtmltopdf_binary -e 'puts(AwWkhtmltopdfBinary.path)'
-          aw_wkhtmltopdf_binary --version
-          binary_path=$(ruby -raw_wkhtmltopdf_binary -e 'puts(AwWkhtmltopdfBinary.path)')
+          ruby -raw_wkhtmltopdf -e 'puts(AwWkhtmltopdf.path)'
+          aw_wkhtmltopdf --version
+          binary_path=$(ruby -raw_wkhtmltopdf -e 'puts(AwWkhtmltopdf.path)')
           $binary_path --version
       # https://github.com/nishidayuya/dpu/blob/v0.6.0/.github/workflows/test.yml#L48
       - name: Output versions
