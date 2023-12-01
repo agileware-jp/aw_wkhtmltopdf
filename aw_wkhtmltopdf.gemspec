@@ -5,6 +5,7 @@ require_relative "lib/aw_wkhtmltopdf/version"
 Gem::Specification.new do |spec|
   spec.name = "aw_wkhtmltopdf"
   spec.version = AwWkhtmltopdf::VERSION
+  spec.license = "Apache-2.0"
   spec.authors = ['Agileware Inc.']
 
   spec.summary = 'WKHTMLTOPDF binaries for GNU/Linux, Windows and macOS'
