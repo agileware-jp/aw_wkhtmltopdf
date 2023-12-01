@@ -1,6 +1,21 @@
 On libexec/ directory, they are licensed under GNU LGPLv3:
 https://github.com/wkhtmltopdf/wkhtmltopdf/blob/0.12.3/LICENSE
 
+- libexec/wkhtmltopdf-x64_mingw32.exe:
+  copy of wkhtmltopdf.exe
+  in wkhtmltox-0.12.4_mingw-w64-cross-win64.exe
+  in https://github.com/wkhtmltopdf/wkhtmltopdf/releases/0.12.4/
+- libexec/wkhtmltopdf-x86_64_darwin:
+  copy of bin/wkhtmltopdf
+  in usr/local/share/wkhtmltox-installer/app.tar.xz
+  in Payload~
+  in wkhtmltox-0.12.3_osx-cocoa-x86-64.pkg
+  in https://github.com/wkhtmltopdf/wkhtmltopdf/releases/0.12.3/
+- libexec/wkhtmltopdf-x86_64_linux:
+  copy of wkhtmltox/bin/wkhtmltopdf
+  in wkhtmltox-0.12.3_linux-generic-amd64.tar.xz
+  in https://github.com/wkhtmltopdf/wkhtmltopdf/releases/0.12.3/
+
 ---
 
 On except libexec/ directory, see below:
