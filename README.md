@@ -1,5 +1,10 @@
 # AwWkhtmltopdf
 
+WKHTMLTOPDF binaries for GNU/Linux, Windows and macOS
+
+[![Gem Version](https://badge.fury.io/rb/aw_wkhtmltopdf.svg)](https://rubygems.org/gems/aw_wkhtmltopdf)
+[![Build Status](https://github.com/agileware-jp/aw_wkhtmltopdf/workflows/test/badge.svg)](https://github.com/agileware-jp/aw_wkhtmltopdf/actions?query=workflow%3Atest)
+
 ## Installation
 
 ```console
