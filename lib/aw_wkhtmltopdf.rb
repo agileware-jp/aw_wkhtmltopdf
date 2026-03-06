@@ -24,7 +24,9 @@ module AwWkhtmltopdf
       # ruby-2.6.10: "linux-gnu"
       # later: "linux"
       when /linux/
-        return ['x86_64', 'linux', nil]
+        host_cpu = RbConfig::CONFIG['host_cpu']
+        cpu = host_cpu =~ /aarch64|arm64/ ? 'aarch64' : 'x86_64'
+        return [cpu, 'linux', nil]
       # "darwin22", "darwin20", ...
       when /darwin/
         # If "host_cpu" is "arm64", it probably uses Rosetta.
