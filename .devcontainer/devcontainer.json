@@ -1,0 +1,19 @@
+{
+  "name": "aw_wkhtmltopdf",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "remoteUser": "vscode",
+  "updateRemoteUserUID": true,
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    }
+  },
+  "mounts": [
+    "source=${localEnv:HOME}/.claude,target=/home/vscode/.claude,type=bind",
+    "source=${localEnv:HOME}/.claude.json,target=/home/vscode/.claude.json,type=bind"
+  ],
+  "initializeCommand": "mkdir -p ${HOME}/.claude && touch ${HOME}/.claude.json",
+  "postCreateCommand": "npm install -g @anthropic-ai/claude-code && bundle install"
+}
