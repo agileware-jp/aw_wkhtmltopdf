@@ -15,6 +15,10 @@ https://github.com/wkhtmltopdf/wkhtmltopdf/blob/0.12.3/LICENSE
   copy of wkhtmltox/bin/wkhtmltopdf
   in wkhtmltox-0.12.3_linux-generic-amd64.tar.xz
   in https://github.com/wkhtmltopdf/wkhtmltopdf/releases/0.12.3/
+- libexec/wkhtmltopdf-aarch64_linux:
+  copy of usr/local/bin/wkhtmltopdf
+  in wkhtmltox_0.12.6.1-3.jammy_arm64.deb
+  in https://github.com/wkhtmltopdf/packaging/releases/0.12.6.1-3/
 
 ---
 
