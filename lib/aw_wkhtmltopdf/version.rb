@@ -2,5 +2,5 @@
 
 module AwWkhtmltopdf
   # wkhtmltopdf version + ".0." + gem revision
-  VERSION = '0.12.3.0.2'
+  VERSION = '0.12.3.0.3'
 end
